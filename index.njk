@@ -1,0 +1,30 @@
+---
+items:
+  - name: Drink too much
+    isDone: false
+  - name: Eat too much
+    isDone: true
+---
+<!--
+TODO:
+  - get TailWind working
+  - Make that page with just two items
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <link rel="stylesheet" href="/css/styles.css">
+      <title>30 Under 30</title>
+    </head>
+    <body>
+      <div class="m-6">
+        <ul class="list-disc">
+        {% for item in items %}
+        <li>{{ item.name }} {{"(done)" if item.isDone}}</li>
+        {% endfor %}
+        </ul>
+      </div>
+    </body>
+</html>
