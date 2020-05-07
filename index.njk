@@ -4,6 +4,50 @@ items:
     isDone: false
   - name: Eat too much
     isDone: true
+  - name: Drink too much
+    isDone: false
+  - name: Eat too much
+    isDone: true
+  - name: Drink too much
+    isDone: false
+  - name: Eat too much
+    isDone: true
+  - name: Drink too much
+    isDone: false
+  - name: Eat too much
+    isDone: true
+  - name: Drink too much
+    isDone: false
+  - name: Eat too much
+    isDone: true
+  - name: Drink too much
+    isDone: false
+  - name: Eat too much
+    isDone: true
+  - name: Drink too much
+    isDone: false
+  - name: Eat too much
+    isDone: true
+  - name: Drink too much
+    isDone: false
+  - name: Eat too much
+    isDone: true
+  - name: Drink too much
+    isDone: false
+  - name: Eat too much
+    isDone: true
+  - name: Drink too much
+    isDone: false
+  - name: Eat too much
+    isDone: true
+  - name: Drink too much
+    isDone: false
+  - name: Eat too much
+    isDone: true
+  - name: Drink too much
+    isDone: false
+  - name: Eat too much
+    isDone: true
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -13,20 +57,29 @@ items:
       <link rel="stylesheet" href="/css/styles.css">
       <title>30 Under 30</title>
     </head>
-    <body class="bg-black">
-      <div class="relative container mx-auto my-8">
-        <h1 class="strato-header" data-heading="30 Under 30">
-	        <span data-heading="30 Under 30">30 Under 30</span>
-        </h1>
-      </div>
-      <div class="container mx-auto">
-        <ul class="item-layout">
-        {% for item in items %}
-        <li class="inline-flex justify-center items-center w-full p-8 mr-4 mb-4 shadow-lg rounded-md bg-white">
-        {{ item.name }} {{"(done)" if item.isDone}}
-        </li>
-        {% endfor %}
-        </ul>
-      </div>
+    <body class="h-screen flex flex-col bg-dusky-blue">
+      <header class="flex-none">
+        <div class="relative container mx-auto my-8">
+          <h1 class="strato-header" data-heading="30 Under 30">
+            <span data-heading="30 Under 30">30 Under 30</span>
+          </h1>
+        </div>
+      </header>
+      <main class="flex-auto">
+        <div class="container mx-auto">
+          <ul class="item-layout">
+          {% for item in items %}
+          <li class="inline-flex justify-center items-center w-full p-8 mr-4 mb-4 shadow-lg rounded-md bg-white">
+          {{ item.name }} {{"(done)" if item.isDone}}
+          </li>
+          {% endfor %}
+          </ul>
+        </div>
+      </main>
+      <footer class="ss-style-multitriangles flex-none bg-orangey-red">
+        <div class="container mx-auto py-8 text-center">
+          In a last ditch effort to hold on to our youth, we pledge to do 30 things before we turn 30.
+        </div>
+      </footer>
     </body>
 </html>
