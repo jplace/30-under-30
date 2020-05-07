@@ -1,84 +1,82 @@
 ---
 items:
   - name: Drink too much
-    isDone: false
   - name: Eat too much
-    isDone: true
+    completed: 1/6/20
   - name: Drink too much
-    isDone: false
   - name: Eat too much
-    isDone: true
+    completed: 1/6/20
   - name: Drink too much
-    isDone: false
   - name: Eat too much
-    isDone: true
+    completed: 1/6/20
   - name: Drink too much
-    isDone: false
   - name: Eat too much
-    isDone: true
+    completed: 1/6/20
   - name: Drink too much
-    isDone: false
   - name: Eat too much
-    isDone: true
+    completed: 1/6/20
   - name: Drink too much
-    isDone: false
   - name: Eat too much
-    isDone: true
+    completed: 1/6/20
   - name: Drink too much
-    isDone: false
   - name: Eat too much
-    isDone: true
+    completed: 1/6/20
   - name: Drink too much
-    isDone: false
   - name: Eat too much
-    isDone: true
+    completed: 1/6/20
   - name: Drink too much
-    isDone: false
   - name: Eat too much
-    isDone: true
+    completed: 1/6/20
   - name: Drink too much
-    isDone: false
   - name: Eat too much
-    isDone: true
+    completed: 1/6/20
   - name: Drink too much
-    isDone: false
   - name: Eat too much
-    isDone: true
+    completed: 1/6/20
   - name: Drink too much
-    isDone: false
   - name: Eat too much
-    isDone: true
+    completed: 1/6/20
 ---
 <!DOCTYPE html>
 <html lang="en">
     <head>
       <meta charset="utf-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="/css/styles.css">
       <title>30 Under 30</title>
     </head>
-    <body class="h-screen flex flex-col bg-dusky-blue">
+    <body class="font-body h-screen flex flex-col bg-dusky-blue">
       <header class="flex-none">
-        <div class="relative container mx-auto my-8">
-          <h1 class="strato-header" data-heading="30 Under 30">
-            <span data-heading="30 Under 30">30 Under 30</span>
-          </h1>
+        <div class="container mx-auto my-6 md:mt-12 px-4">
+          <div class="relative">
+            <h1 class="strato-header" data-heading="30 Under 30">
+              <span data-heading="30 Under 30">30 Under 30</span>
+            </h1>
+          </div>
         </div>
       </header>
       <main class="flex-auto">
-        <div class="container mx-auto">
+        <div class="container mx-auto my-8 px-4">
           <ul class="item-layout">
           {% for item in items %}
-          <li class="inline-flex justify-center items-center w-full p-8 mr-4 mb-4 shadow-lg rounded-md bg-white">
-          {{ item.name }} {{"(done)" if item.isDone}}
+          <li class="item {{ 'item-done' if item.completed }}">
+          {{ item.name }}
+          {% if item.completed %}
+          <div class="item-sash">
+            <span>Completed {{item.completed}}</span>
+          </div>
+          {% endif %}
           </li>
           {% endfor %}
           </ul>
         </div>
       </main>
-      <footer class="ss-style-multitriangles flex-none bg-orangey-red">
-        <div class="container mx-auto py-8 text-center">
-          In a last ditch effort to hold on to our youth, we pledge to do 30 things before we turn 30.
+      <footer class="flex-none footer-separator text-dreary-red bg-orangey-red">
+        <div class="container mx-auto my-8 px-4">
+          <div class="text-center">
+            <span>In a last ditch effort to hold on to our youth, we pledge to do 30 things before we turn 30.</span>
+          </div>
         </div>
       </footer>
     </body>
