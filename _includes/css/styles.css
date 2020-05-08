@@ -44,6 +44,18 @@
 
 @tailwind utilities;
 
+.progress-bar-outer {
+  height: 5px;
+  background-color: theme("colors.header-blue.100");
+  border-radius: 5px;
+}
+
+.progress-bar-inner {
+  height: 5px;
+  background-color: theme("colors.loverless-gold");
+  border-radius: 5px;
+}
+
 .item {
   @apply relative;
   @apply inline-flex;
@@ -57,7 +69,7 @@
   @apply mb-4;
   @apply shadow-lg;
   @apply rounded-md;
-  @apply bg-white;
+  @apply bg-concrete;
 }
 
 .item.item-done {
@@ -80,10 +92,8 @@
   text-align: center;
   line-height: 20px;
   transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
   width: 100px;
   display: block;
-  background: theme("colors.orangey-red.default");
   background: linear-gradient(
     theme("colors.orangey-red.default") 0%,
     theme("colors.orangey-red.dark") 100%
@@ -116,14 +126,6 @@
   border-right: 3px solid theme("colors.orangey-red.dark");
   border-bottom: 3px solid transparent;
   border-top: 3px solid theme("colors.orangey-red.dark");
-}
-
-:root {
-  --color1: #a2adff;
-  --color2: #c9cfff;
-  --color3: #7c88e6;
-  --color4: #5a66c4;
-  --color5: #7d89e7;
 }
 
 .item-layout {
@@ -167,9 +169,11 @@
   text-align: center;
   text-transform: uppercase;
   line-height: 1;
-  color: var(--color1);
-  text-shadow: -1px -1px 0 var(--color4), 1px -1px 0 var(--color4),
-    -1px 1px 0 var(--color4), 1px 1px 0 var(--color4);
+  color: theme("colors.header-blue.100");
+  text-shadow: -1px -1px 0 theme("colors.header-blue.500"),
+    1px -1px 0 theme("colors.header-blue.500"),
+    -1px 1px 0 theme("colors.header-blue.500"),
+    1px 1px 0 theme("colors.header-blue.500");
 }
 
 @screen md {
@@ -199,27 +203,27 @@
 }
 
 .strato-header:before {
-  color: var(--color2);
+  color: theme("colors.header-blue.200");
   font-family: "strato-cesello";
   text-shadow: none;
   z-index: 3;
 }
 
 .strato-header:after {
-  color: var(--color4);
+  color: theme("colors.header-blue.500");
   font-family: "strato-tonale", sans-serif;
   z-index: -1;
 }
 
 .strato-header span:before {
-  color: var(--color3);
+  color: theme("colors.header-blue.300");
   font-family: "strato-eclisse";
   text-shadow: none;
   z-index: -1;
 }
 
 .strato-header span:after {
-  color: var(--color5);
+  color: theme("colors.header-blue.400");
   font-family: "strato-inline";
   text-shadow: none;
   z-index: 6;
