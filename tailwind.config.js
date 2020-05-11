@@ -2,18 +2,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "dusky-blue": "#475f94",
-        "loverless-gold": "#fddc5c",
-        "orangey-red": { default: "#fa4224", dark: "#d62204" },
-        "dreary-red": "#2b0000",
-        "header-blue": {
-          100: "#c8dcff",
-          200: "#b6caff",
-          300: "#7c91ca",
-          400: "#7d89e7",
-          500: "#0b3161",
+        "space-cadette": { 50: "#555768", 75: "#404255", 100: "#2B2D42" },
+        "cool-grey": "#F3EAF4",
+        xanthic: {
+          50: "#FAF732",
+          100: "#F8F32B",
+          200: "#E3DB27",
+          300: "#CDC422",
+          400: "#B8AC1E",
+          500: "#A2941A",
         },
-        concrete: "#F5F9FF",
+        magnolia: "#F3EAF4",
+        "rich-black": "#1A1A1A",
       },
     },
     fontFamily: {

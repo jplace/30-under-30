@@ -46,13 +46,13 @@
 
 .progress-bar-outer {
   height: 5px;
-  background-color: theme("colors.header-blue.100");
+  background-color: theme("colors.space-cadette.50");
   border-radius: 5px;
 }
 
 .progress-bar-inner {
   height: 5px;
-  background-color: theme("colors.loverless-gold");
+  background-color: theme("colors.xanthic.50");
   border-radius: 5px;
 }
 
@@ -69,11 +69,12 @@
   @apply mb-4;
   @apply shadow-lg;
   @apply rounded-md;
-  @apply bg-concrete;
+  @apply bg-cool-grey;
 }
 
 .item.item-done {
-  @apply bg-loverless-gold;
+  @apply bg-space-cadette-50;
+  @apply text-cool-grey;
 }
 
 .item-sash {
@@ -85,6 +86,7 @@
   width: 75px;
   height: 75px;
   text-align: right;
+  @apply text-space-cadette-100;
 }
 
 .item-sash span {
@@ -95,8 +97,8 @@
   width: 100px;
   display: block;
   background: linear-gradient(
-    theme("colors.orangey-red.default") 0%,
-    theme("colors.orangey-red.dark") 100%
+    theme("colors.xanthic.50") 0%,
+    theme("colors.xanthic.300") 100%
   );
   box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
   position: absolute;
@@ -110,10 +112,10 @@
   left: 0px;
   top: 100%;
   z-index: -1;
-  border-left: 3px solid theme("colors.orangey-red.dark");
+  border-left: 3px solid theme("colors.xanthic.300");
   border-right: 3px solid transparent;
   border-bottom: 3px solid transparent;
-  border-top: 3px solid theme("colors.orangey-red.dark");
+  border-top: 3px solid theme("colors.xanthic.300");
 }
 
 .item-sash span::after {
@@ -123,9 +125,9 @@
   top: 100%;
   z-index: -1;
   border-left: 3px solid transparent;
-  border-right: 3px solid theme("colors.orangey-red.dark");
+  border-right: 3px solid theme("colors.xanthic.300");
   border-bottom: 3px solid transparent;
-  border-top: 3px solid theme("colors.orangey-red.dark");
+  border-top: 3px solid theme("colors.xanthic.300");
 }
 
 .item-layout {
@@ -143,14 +145,14 @@
   height: 27px;
   background: linear-gradient(
         225deg,
-        theme("colors.dusky-blue") 33.3333%,
+        theme("colors.space-cadette.100") 33.3333%,
         transparent 33.3333%
       )
       0 0,
     linear-gradient(
         135deg,
-        theme("colors.dusky-blue") 33.3333%,
-        theme("colors.orangey-red.default") 33.3333%
+        theme("colors.space-cadette.100") 33.3333%,
+        theme("colors.rich-black") 33.3333%
       )
       0 0;
   background-repeat: repeat-x;
@@ -169,11 +171,11 @@
   text-align: center;
   text-transform: uppercase;
   line-height: 1;
-  color: theme("colors.header-blue.100");
-  text-shadow: -1px -1px 0 theme("colors.header-blue.500"),
-    1px -1px 0 theme("colors.header-blue.500"),
-    -1px 1px 0 theme("colors.header-blue.500"),
-    1px 1px 0 theme("colors.header-blue.500");
+  color: theme("colors.cool-grey");
+  text-shadow: -1px -1px 0 theme("colors.xanthic.500"),
+    1px -1px 0 theme("colors.xanthic.500"),
+    -1px 1px 0 theme("colors.xanthic.500"),
+    1px 1px 0 theme("colors.xanthic.500");
 }
 
 @screen md {
@@ -203,27 +205,27 @@
 }
 
 .strato-header:before {
-  color: theme("colors.header-blue.200");
+  color: theme("colors.xanthic.200");
   font-family: "strato-cesello";
   text-shadow: none;
   z-index: 3;
 }
 
 .strato-header:after {
-  color: theme("colors.header-blue.500");
+  color: theme("colors.xanthic.500");
   font-family: "strato-tonale", sans-serif;
   z-index: -1;
 }
 
 .strato-header span:before {
-  color: theme("colors.header-blue.300");
+  color: theme("colors.xanthic.300");
   font-family: "strato-eclisse";
   text-shadow: none;
   z-index: -1;
 }
 
 .strato-header span:after {
-  color: theme("colors.header-blue.400");
+  color: theme("colors.xanthic.400");
   font-family: "strato-inline";
   text-shadow: none;
   z-index: 6;
